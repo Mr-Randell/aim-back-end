@@ -23,9 +23,17 @@ class UsersController < ApplicationController
         render json: user, status: :updated
     end
 
+    #destroy route 
+    def destroy
+        user = User.find_by(id: params[:id])
+        user.destroy
+    end
+
+
 
 
     private 
+    
     def user_params
         params.permit(:username,:password, :email, :password_confirmation)
     end
