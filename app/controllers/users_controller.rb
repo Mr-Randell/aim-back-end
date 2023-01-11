@@ -16,6 +16,14 @@ class UsersController < ApplicationController
         render json: current_user, status: :ok
     end
 
+    #Update route 
+    def Update
+        user = find_user
+        user.update!(user_params)
+        render json: user, status: :updated
+    end
+
+
 
     private 
     def user_params
