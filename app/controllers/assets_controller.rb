@@ -12,6 +12,11 @@ class AssetsController < ApplicationController
 
 
     private
+
+    def find_asset(id)
+        Asset.find_by(id: id)
+    end
+
     def asset_params
         params.permit(:name, :quantity)
     end
