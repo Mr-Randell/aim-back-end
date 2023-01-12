@@ -10,6 +10,11 @@ class AssetsController < ApplicationController
         render json: asset, include: [:user]
     end
 
+    def index 
+        render json: Asset.all, status: :ok
+    end
+
+
 
     private
 
