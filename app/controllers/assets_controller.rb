@@ -1,5 +1,8 @@
 class AssetsController < ApplicationController
 
+    skip_before_action :authorize_admin
+    skip_before_action :authorize_manager, only: [:show, :index]
+
     def create
         new_asset = Asset.create!(asset_params)
         render json: new_asset, status: :created
@@ -19,7 +22,7 @@ class AssetsController < ApplicationController
         asset.destroy
         head :no_content
     end
-    
+
     private
 
     def find_asset(id)
