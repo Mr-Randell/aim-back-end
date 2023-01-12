@@ -14,8 +14,12 @@ class AssetsController < ApplicationController
         render json: Asset.all, status: :ok
     end
 
-
-
+    def destroy
+        asset = find_asset(params[:id])
+        asset.destroy
+        head :no_content
+    end
+    
     private
 
     def find_asset(id)
