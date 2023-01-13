@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_223044) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_224802) do
   create_table "assets", force: :cascade do |t|
     t.string "user_name"
     t.integer "user_id"
@@ -23,6 +23,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_223044) do
     t.string "released_year"
     t.integer "employee_id"
     t.integer "category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.integer "employee_id"
+    t.string "employee_name"
+    t.date "date_of_birth"
+    t.date "joining_date"
+    t.date "leaving_date"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "requests", force: :cascade do |t|
