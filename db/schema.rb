@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_222451) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_223044) do
   create_table "assets", force: :cascade do |t|
     t.string "user_name"
     t.integer "user_id"
-    t.string "category"
     t.string "description"
     t.boolean "status"
     t.integer "quantity"
