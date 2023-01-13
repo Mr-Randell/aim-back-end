@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_id: 1
+  employee_name: MyString
+  date_of_birth: 2023-01-14
+  joining_date: 2023-01-14
+  leaving_date: 2023-01-14
+  password_digest: MyString
+
+two:
+  employee_id: 1
+  employee_name: MyString
+  date_of_birth: 2023-01-14
+  joining_date: 2023-01-14
+  leaving_date: 2023-01-14
+  password_digest: MyString
