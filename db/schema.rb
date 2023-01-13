@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_221510) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_221938) do
   create_table "assets", force: :cascade do |t|
     t.string "user_name"
     t.integer "user_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_221510) do
     t.datetime "updated_at", null: false
     t.integer "price"
     t.string "released_year"
+    t.integer "employee_id"
   end
 
   create_table "requests", force: :cascade do |t|
