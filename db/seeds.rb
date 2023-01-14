@@ -86,27 +86,27 @@ asset1 = Asset.create(
  employee1 = Employee.create(
       employee_id:7,
       employee_name: "Ednah Miguel",
-      date_of_birth: "Ninety Eight",
-      joining_date:  "Two Five",
-      leaving_date:  "One Nine",
+      # date_of_birth: "Ninety Eight",
+      # joining_date:  "Two Five",
+      # leaving_date:  "One Nine",
       password_digest:"Makemake"
  )
 
  employee2 = Employee.create(
    employee_id:8,
    employee_name: "Tanya Osano",
-   date_of_birth: "Ninety Eight",
-   joining_date:  "Two Five",
-   leaving_date:  "One Nine",
+   # date_of_birth: "Ninety Eight",
+   # joining_date:  "Two Five",
+   # leaving_date:  "One Nine",
    password_digest:"Mangorine"
 )
 
 employee3 = Employee.create(
    employee_id:9,
-   employee_name: "Brian Kamau"
-   date_of_birth: "Ninety Eight",
-   joining_date:  "Two Five",
-   leaving_date:  "One Nine",
+   employee_name: "Brian Kamau",
+   # date_of_birth: "Ninety Eight",
+   # joining_date:  "Two Five",
+   # leaving_date:  "One Nine",
    password_digest:"Apollo"
 )
 

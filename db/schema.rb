@@ -10,56 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_094608) do
-  create_table "assets", force: :cascade do |t|
-    t.string "user_name"
-    t.integer "user_id"
-    t.string "description"
-    t.boolean "status"
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "price"
-    t.string "released_year"
-    t.integer "employee_id"
-    t.integer "category_id"
-    t.string "category"
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_224802) do
   create_table "employees", force: :cascade do |t|
     t.integer "employee_id"
     t.string "employee_name"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "date_of_birth"
-    t.string "joining_date"
-    t.string "leaving_date"
-  end
-
-  create_table "requests", force: :cascade do |t|
-    t.string "user_name"
-    t.string "category"
-    t.boolean "status"
-    t.string "urgency"
-    t.integer "user_id"
-    t.integer "asset_id"
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "user_name"
-    t.string "email"
-    t.string "role"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
