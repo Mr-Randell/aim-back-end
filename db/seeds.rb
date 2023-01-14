@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -35,8 +36,8 @@ asset1 = Asset.create(
 
 #all seeding to do with Request 
  request1 = Request.create(
-    user_id: 3,
-    asset_id: asset18.id,
+    user_id: 4,
+    asset_id: asset1.id,
     user_name: "HP Victus 16",
     category: "Laptop",
     quantity: 2,
@@ -44,8 +45,8 @@ asset1 = Asset.create(
     urgency: "Urgent"
  )
  request2 = Request.create(
-    user_id: 4,
-    asset_id: asset11.id ,
+    user_id: 5,
+    asset_id: asset3.id ,
     user_name: "HP ProBook X360",
     category: "Laptop",
     quantity: 5,
@@ -53,8 +54,8 @@ asset1 = Asset.create(
     urgency: "Not Urgent"
  )
  request3 = Request.create(
-    user_id: 5,
-    asset_id: asset5.id ,
+    user_id: 6,
+    asset_id: asset2.id ,
     user_name: "Lenovo Yoga 720",
     category: "Laptop",
     quantity: 4,
@@ -81,5 +82,33 @@ asset1 = Asset.create(
     role: "Employee",
     password: "Pineapple"
  )
+ #All seeding to do with Employees 
+ employee1 = Employee.create(
+      employee_id:7,
+      employee_name: "Ednah Miguel",
+      date_of_birth: "Ninety Eight",
+      joining_date:  "Two Five",
+      leaving_date:  "One Nine",
+      password_digest:"Makemake"
+ )
+
+ employee2 = Employee.create(
+   employee_id:8,
+   employee_name: "Tanya Osano",
+   date_of_birth: "Ninety Eight",
+   joining_date:  "Two Five",
+   leaving_date:  "One Nine",
+   password_digest:"Mangorine"
+)
+
+employee3 = Employee.create(
+   employee_id:9,
+   employee_name: "Brian Kamau"
+   date_of_birth: "Ninety Eight",
+   joining_date:  "Two Five",
+   leaving_date:  "One Nine",
+   password_digest:"Apollo"
+)
+
 
  puts "Done Seeding..."

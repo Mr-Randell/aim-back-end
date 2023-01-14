@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_013716) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_14_094608) do
   create_table "assets", force: :cascade do |t|
     t.string "user_name"
     t.integer "user_id"
@@ -35,12 +35,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_013716) do
   create_table "employees", force: :cascade do |t|
     t.integer "employee_id"
     t.string "employee_name"
-    t.date "date_of_birth"
-    t.date "joining_date"
-    t.date "leaving_date"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "date_of_birth"
+    t.string "joining_date"
+    t.string "leaving_date"
   end
 
   create_table "requests", force: :cascade do |t|
