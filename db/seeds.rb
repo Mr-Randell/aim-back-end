@@ -9,14 +9,14 @@ puts "Seeding ..."
 
 asset1 = Asset.create(
     user_id:1 ,
-    name: "HP Envy 15" ,
+    user_name: "HP Envy 15" ,
     category: "Laptop",
     description: "Intel core i7, 16GB RAM, 512GB SSD",
     quantity: "5"
  )
  asset2 = Asset.create(
     user_id:2 ,
-    name: "DELL inspiron 15-3000",
+    user_name: "DELL inspiron 15-3000",
     category: "Laptop",
     description: "core i5, 8GB RAM, 512GB SSD" ,
     quantity: "9"
