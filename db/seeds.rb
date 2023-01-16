@@ -55,21 +55,21 @@ asset1 = Asset.create(
  )
 
  employee1 = Employee.create(
-   employee_id:5
+   employee_id:5,
    employee_name:"Biran Montana",
-   date_of_birth:"15/10/1998"
-   joining_date:"06/1/2012"
-   leaving_data:"13/07/2020"
-   password_digest:"Makemake"
+   date_of_birth:"15/10/1998",
+   joining_date:"06/1/2012",
+   leaving_data:"13/07/2020",
+   password_digest:"Makemake",
  )
 
  employee2 = Employee.create(
-   employee_id:6
+   employee_id:6,
    employee_name:"Bridget Monari",
-   date_of_birth:"12/02/2002"
-   joining_date:"09/06/2013"
-   leaving_data:"15/01/2023"
-   password_digest:"Wapmap"
+   date_of_birth:"12/02/2002",
+   joining_date:"09/06/2013",
+   leaving_data:"15/01/2023",
+   password_digest:"Wapmap",
  )
 
  puts "Done Seeding..."
