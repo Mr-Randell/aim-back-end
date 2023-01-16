@@ -24,7 +24,7 @@ asset1 = Asset.create(
  
  request1 = Request.create(
     user_id: 3,
-    asset_id: asset18.id,
+    asset_id: asset1.id,
     name: "HP Victus 16",
     category: "Laptop",
     quantity: 2,
@@ -33,7 +33,7 @@ asset1 = Asset.create(
  )
  request2 = Request.create(
     user_id: 4,
-    asset_id: asset11.id ,
+    asset_id: asset2.id ,
     name: "HP ProBook X360",
     category: "Laptop",
     quantity: 5,
@@ -53,4 +53,23 @@ asset1 = Asset.create(
     role: "Manager",
     password: "Pear"
  )
+
+ employee1 = Employee.create(
+   employee_id:5
+   employee_name:"Biran Montana",
+   date_of_birth:"15/10/1998"
+   joining_date:"06/1/2012"
+   leaving_data:"13/07/2020"
+   password_digest:"Makemake"
+ )
+
+ employee2 = Employee.create(
+   employee_id:6
+   employee_name:"Bridget Monari",
+   date_of_birth:"12/02/2002"
+   joining_date:"09/06/2013"
+   leaving_data:"15/01/2023"
+   password_digest:"Wapmap"
+ )
+
  puts "Done Seeding..."
