@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-    #Pertains to Everything  to do with login and signup 
-    # has_many :requests
-    # has_many :assets, through: :requests
+    belongs_to :employee
+    # belongs_to :requests 
+    has_many :assets,  through:  :requests
 
+    has_secure_password
 end

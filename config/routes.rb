@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  resources :employees
   resources :categories
+  resources :employees
   resources :requests
-  resources :assets 
-  resources :users
+  resources :assets
+  resources :users, only:[:show, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  post "/signin", to: "session#create"
-  get "/logout",  to: "session#destroy"
+  post "/sigin", to: "session#create"
+  get "/logout", to: "session#destroy"
   post "/signup", to: "user#create"
   get "/me", to: "user#show"
 end

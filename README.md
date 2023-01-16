@@ -1,9 +1,4 @@
-# Phase 5 Final Project : AIM App
-
-## N/B: Most commits were made to the 'DEVELOP' branch for the purpose of error control such that final approved version is merged into the main branch
-
-## Focus 🎯
-Building AIM APP API that uses Active Record to access and persist data in a database, which will be used by a separate AIM React app frontend.
+# README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

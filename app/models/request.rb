@@ -1,4 +1,4 @@
 class Request < ApplicationRecord
-    belongs_to :employees
-    belongs_to :assets 
+    belongs_to :asset 
+    belongs_to :user
 end

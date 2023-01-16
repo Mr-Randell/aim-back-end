@@ -1,3 +1,4 @@
 class EmployeeSerializer < ActiveModel::Serializer
-  attributes :id, :employee_id, :employee_name, :date_of_birth, :joining_date, :leaving_date, :password_digest
+  attributes :id, :name, :location, :joining_date, :job_title
+  belongs_to :user 
 end

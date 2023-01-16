@@ -1,4 +1,6 @@
 class Asset < ApplicationRecord
-    has_many :requests
-    has_many :employees, through: :requests
+  belongs_to :category
+  has_many :requests
+  has_many :users,  through: :requests
+  # belongs_to :request
 end
