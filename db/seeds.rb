@@ -25,7 +25,7 @@ asset1 = Asset.create(
  request1 = Request.create(
     user_id: 3,
     asset_id: asset1.id,
-    name: "HP Victus 16",
+    user_name: "HP Victus 16",
     category: "Laptop",
     quantity: 2,
     status: "Approved",
@@ -34,7 +34,7 @@ asset1 = Asset.create(
  request2 = Request.create(
     user_id: 4,
     asset_id: asset2.id ,
-    name: "HP ProBook X360",
+    user_name: "HP ProBook X360",
     category: "Laptop",
     quantity: 5,
     status: "Rejected",
