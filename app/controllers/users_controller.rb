@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessed_entity
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
   
-    skip_before_action :authorize_admin, only: :show
+    skip_before_action :authorize_user, only: :show
   
     # create 
     def create
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
       render json: { errors: invalid.record.errors}, status: :unprocessable_entity
     end
 
-    def authorize_admin
+    def authorize_user
       return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
 end

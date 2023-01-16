@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
     # skip_before_action :authorize_admin
-    skip_before_action :authorize_manager, only: [:show, :index]
+    skip_before_action :authorize_user, only: [:show, :index]
   
     def create
       new_asset = Asset.create!(asset_params)
@@ -33,7 +33,7 @@ class AssetsController < ApplicationController
       params.permit(:name, :quantity,  :status, :image_url, :released_year, :price , :description)
     end
     
-    def authorize_manager
+    def authorize_user
       return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
   end
