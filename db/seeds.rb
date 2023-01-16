@@ -1,17 +1,45 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the bin/rails db:seed command (or create!d alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+#   movies = Movie.create!([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create!(name: "Luke", movie: movies.first)
 # id
 # user_id
 # name
 # category
 # description
 # quantity
-asset1 = Asset.create(
+
+ User.create!(
+   username: "Admin",
+   email: "admin@example.com",
+   role: "Admin",
+   password: "password"
+)
+ User.create!(
+   username: "Jane",
+   email: "janebuffay@gmail.com",
+   role: "Manager",
+   password: "Pear"
+)
+
+Employee.create!(
+   name: "Hafsa hafsa",
+   location:"Kakamega",
+   joining_date:"01/01/2012",
+   job_title:"Librarian",
+)
+
+ Employee.create!(
+   name: "Randell Randelle",
+   location: "Mombasa",
+   joining_date:"12/10/2005",
+   job_title:"Technician",
+)
+
+ Asset.create!(
    # user_id:1 ,
    price:200,
    name: "HP Envy 15" ,
@@ -22,9 +50,9 @@ asset1 = Asset.create(
    location:"Malaysia",
    released_year:"2022",
    image_url:"https://img.freepik.com/free-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg?w=900&t=st=1673870564~exp=1673871164~hmac=f0b207e0338f71d239fb9b607e63b22853dfa8f059bb4b97fd550b2e40500a82",
-),
+)
 
-asset2 = Asset.create(
+Asset.create!(
    # user_id:2 ,
    price:200,
    name: "DELL inspiron 15-3000",
@@ -37,7 +65,7 @@ asset2 = Asset.create(
    image_url:"https://img.freepik.com/free-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg?w=900&t=st=1673870564~exp=1673871164~hmac=f0b207e0338f71d239fb9b607e63b22853dfa8f059bb4b97fd550b2e40500a82"
 )
 
-request1 = Request.create(
+ Request.create!(
    user_id: 1,
    # price:200,
    asset_id:1,
@@ -46,7 +74,7 @@ request1 = Request.create(
    status: "Approved",
    urgency: "Urgent"
 )
-request2 = Request.create(
+ Request.create!(
    user_id: 2,
    # price:200,
    asset_id: 2,
@@ -56,34 +84,9 @@ request2 = Request.create(
    urgency: "Not Urgent"
 )
 
-user1 = User.create(
-   username: "Admin",
-   email: "admin@example.com",
-   role: "Admin",
-   password: "password"
-)
-user2 = User.create(
-   username: "Jane",
-   email: "janebuffay@gmail.com",
-   role: "Manager",
-   password: "Pear"
-)
 
-employee1 = Employee.create(
-   name: "Hafsa hafsa",
-   location:"Kakamega",
-   joining_date:"01/01/2012",
-   job_title:"Librarian",
-)
 
-employee2 = Employee.create(
-   name: "Randell Randelle",
-   location: "Mombasa",
-   joining_date:"12/10/2005",
-   job_title:"Technician",
-)
-
-category1 = Category.create(
+ Category.create!(
    category:"Laptop",
 )
 
