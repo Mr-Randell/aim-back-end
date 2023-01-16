@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
-  #   skip_before_action :authorize_admin
-  #  skip_before_action :authorize_manager, only: [:show, :index]
+    # skip_before_action :authorize_admin
+    skip_before_action :authorize_manager, only: [:show, :index]
   
     def create
       new_asset = Asset.create!(asset_params)
@@ -8,7 +8,7 @@ class AssetsController < ApplicationController
     end
   
     def show
-      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+      # return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
       asset = find_asset(params[:id])
       render json: asset, include: [:user]
     end
@@ -31,5 +31,9 @@ class AssetsController < ApplicationController
   
     def asset_params
       params.permit(:name, :quantity,  :status, :image_url, :released_year, :price , :description)
+    end
+    
+    def authorize_manager
+      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
     end
   end
