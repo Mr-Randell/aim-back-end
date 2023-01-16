@@ -8,6 +8,7 @@ class AssetsController < ApplicationController
     end
   
     def show
+      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
       asset = find_asset(params[:id])
       render json: asset, include: [:user]
     end

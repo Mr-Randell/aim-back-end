@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   
     # show route
     def show
+      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
       current_user = @current_user
       render json: current_user, status: :ok
     end
