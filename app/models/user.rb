@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    belongs_to :employee
+    belongs_to :employee, optional: true
     # belongs_to :requests 
     has_many :assets,  through:  :requests
 

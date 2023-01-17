@@ -11,7 +11,7 @@
 # category
 # description
 # quantity
-
+puts "Seeding..."
  User.create!(
    username: "Admin",
    email: "admin@example.com",
@@ -27,7 +27,7 @@
 
 Employee.create!(
    name: "Hafsa hafsa",
-   location:"Kakamega",
+   location: "Kakamega",
    joining_date:"01/01/2012",
    job_title:"Librarian",
 )

@@ -16,16 +16,17 @@ class EmployeesController < ApplicationController
     
       def destroy 
         employee = find_Employee(params[:id])
-        Employee.destroy
+        employee.destroy
         head :no_content
       end
+
       private
     
-      def find_Employee
-        Employee.find_by(id: params[:id])
+      def find_Employee(id)
+        Employee.find_by(id: id)
       end
     
       def employee_params
-        params.permit(:name, :location, :joining, :job_title)
+        params.require(:employee).permit(:name, :location, :joining_date, :job_title)
       end
 end
