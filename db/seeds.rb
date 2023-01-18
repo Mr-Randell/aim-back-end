@@ -11,7 +11,14 @@
 # category
 # description
 # quantity
-puts "Seeding..."
+User.destroy_all
+Employee.destroy_all
+Asset.destroy_all
+Request.destroy_all
+Category.destroy_all
+
+puts "🌱 Seeding spices..."
+
  User.create!(
    username: "Admin",
    email: "admin@example.com",
@@ -43,7 +50,7 @@ Employee.create!(
    # user_id:1 ,
    price:200,
    name: "HP Envy 15" ,
-   category_id: "1",
+   category_id: 1,
    description: "Intel core i7, 16GB RAM, 512GB SSD",
    quantity: 5,
    status:"Assigned",
@@ -56,7 +63,7 @@ Asset.create!(
    # user_id:2 ,
    price:200,
    name: "DELL inspiron 15-3000",
-   category_id: "2",
+   category_id: 2,
    description: "core i5, 8GB RAM, 512GB SSD" ,
    quantity: 9,
    status:"Assigned",
@@ -90,4 +97,4 @@ Asset.create!(
    category:"Laptop",
 )
 
-puts "Done Seeding..."
+puts "✅ Done seeding!"
