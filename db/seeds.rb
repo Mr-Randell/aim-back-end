@@ -23,13 +23,19 @@ puts "🌱 Seeding spices..."
    username: "Admin",
    email: "admin@example.com",
    role: "Admin",
-   password: "password"
+   password: "password",
+   companyname:"StarLink",
+   phonenumber:71234567,
+   industry:"Techno Startup"
 )
  User.create!(
    username: "Jane",
    email: "janebuffay@gmail.com",
    role: "Manager",
-   password: "Pear"
+   password: "Pear",
+   companyname:"Maskstar",
+   phonenumber:726933823,
+   industry:"IOT Startup"
 )
 
 Employee.create!(
