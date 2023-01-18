@@ -16,6 +16,10 @@ class RequestsController < ApplicationController
       request = find_request
       render json: request, status: :ok
     end
+
+    def index
+      render json: Request.all, status: :ok
+     end
   
     def destroy
       request = find_request
