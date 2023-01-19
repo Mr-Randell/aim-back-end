@@ -21,6 +21,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Use Active Model has_secure password
 gem "bcrypt", "~> 3.1.7"
 
+# add railway gem to your Gemfile
+gem 'railway'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
