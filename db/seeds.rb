@@ -22,7 +22,7 @@ puts "🌱 Seeding spices..."
  User.create!(
    username: "Admin",
    email: "admin@example.com",
-   role: "Admin",
+   role: "admin",
    password: "password",
    companyname:"StarLink",
    phonenumber:71234567,
@@ -31,7 +31,7 @@ puts "🌱 Seeding spices..."
  User.create!(
    username: "Jane",
    email: "janebuffay@gmail.com",
-   role: "Manager",
+   role: "user",
    password: "Pear",
    companyname:"Maskstar",
    phonenumber:726933823,
