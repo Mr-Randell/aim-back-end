@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   
     # skip_before_action :authorize_user, only: :show
   
-     #signup
+     # Everything pertaining to signup.... Done 
     def create
       user = User.create(user_params)
       if user.valid?
@@ -21,9 +21,9 @@ class UsersController < ApplicationController
       render :index
     end
 
-    # show route
+    # This is an Auto -login feature 
     def show
-      
+      render json: @current_user
     end
   
     # Update route
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     end
   
     def user_params
-      params.permit(:username, :email, :role, :password, :companyname, :phonenumber, :companysize, :industry)
+      params.permit(:username, :email, :role, :password, :companyname, :phonenumber, :industry)
     end
   
     def render_not_found
