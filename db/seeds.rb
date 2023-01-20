@@ -26,6 +26,7 @@ puts "🌱 Seeding spices..."
    password: "password",
    companyname:"StarLink",
    phonenumber:71234567,
+   companysize:20,
    industry:"Techno Startup"
 )
  User.create!(
@@ -35,6 +36,7 @@ puts "🌱 Seeding spices..."
    password: "Pear",
    companyname:"Maskstar",
    phonenumber:726933823,
+   companysize:10,
    industry:"IOT Startup"
 )
 
