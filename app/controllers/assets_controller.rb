@@ -1,14 +1,11 @@
 class AssetsController < ApplicationController
-    # skip_before_action :authorize_admin
-    # skip_before_action :authorize_user, only: [:show, :index]
-  
-
     def index
       render json: Asset.all, status: :ok
      end
    
+
     def create
-      new_asset = Asset.create!(asset_params)
+      new_asset = @current_user.assets.create!(asset_params)
       render json: new_asset, status: :created
     end
   
