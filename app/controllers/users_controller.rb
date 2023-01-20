@@ -2,9 +2,9 @@ class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessed_entity
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
   
-    # skip_before_action :authorize_user, only: :show
+    skip_before_action :authorize, only: :create
   
-     #signup
+     # Everything pertaining to signup.... Done 
     def create
       user = User.create(user_params)
       if user.valid?
@@ -21,9 +21,9 @@ class UsersController < ApplicationController
       render :index
     end
 
-    # show route
+    # This is an Auto -login feature 
     def show
-      
+      render json: @current_user
     end
   
     # Update route
@@ -58,7 +58,5 @@ class UsersController < ApplicationController
       render json: { errors: invalid.record.errors}, status: :unprocessable_entity
     end
 
-    def authorize_user
-      return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
-    end
+   
 end

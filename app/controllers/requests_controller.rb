@@ -1,14 +1,10 @@
 class RequestsController < ApplicationController
-    # skip_before_action :authorize_admin
-    # skip_before_action :authorize_manager, except: [:update]
-  
-    # def index
-    #   requests = Request.where(user_id: session[:user_id]).order("created_at DESC")
-    #   render json: product, status: :ok
-    # end
+    def index
+      render json: Request.all, status: :ok
+     end
   
     def create
-      new_request = Request.create!(request_params)
+      new_request = @current_user.requests.create!(request_params)
       render json: new_request, status: :created
     end
   
@@ -17,10 +13,7 @@ class RequestsController < ApplicationController
       render json: request, status: :ok
     end
 
-    def index
-      render json: Request.all, status: :ok
-     end
-  
+    
     def destroy
       request = find_request
       request.destroy
@@ -32,6 +25,7 @@ class RequestsController < ApplicationController
       request.update(request_params)
     end
   
+
     private
     def find_request
       Request.find_by(id: params[:id])

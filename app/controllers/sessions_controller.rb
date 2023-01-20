@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
-    # before_action :authorize
-    skip_before_action :authorize, only: :create
+  
+    skip_before_action :authorize, only: :create 
+    skip_before_action :authorize, only: :destroy
   
     # everthing pertaining to login
     def create
@@ -21,13 +22,4 @@ class SessionsController < ApplicationController
       head :no_content
     end
   
-    # private
-  
-    # def user_params
-    #   params.permit(:username, :id, :password)
-    # end
-
-    # def authorize
-    #   return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
-    # end
   end
